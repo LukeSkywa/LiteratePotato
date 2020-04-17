@@ -1,0 +1,59 @@
+
+@import './variables';
+
+//stile dei bottoni
+@mixin button-style {
+    border-radius: 50px;
+    background-color: $color-button;
+    font-size: 15px;
+    outline: none;
+    border:none;
+}
+//stile bottoni trasparenti per icone
+@mixin button-transparent {
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+}
+//stile bottoni circolari
+@mixin button-login{
+    height:100px;
+    width:100px;
+    justify-self: right;
+    border-radius: 60px;
+    font-size: 60px;
+    background-color:#688393;
+    border: none;
+    color:white;
+    outline: none;
+    position: fixed;
+    margin-left: 9px;
+    margin-top: -39px;
+}
+//stile delle icone
+@mixin icon-style {
+    font-size: 15px;
+    font-size: 25px;
+    color: white;
+}
+//stile dei box
+@mixin box-style{
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+//stile dei box form
+@mixin box-form-style {
+    border-radius: 20px;
+    box-shadow: -10px -10px #688393;
+    background-image: $basic-gradient;
+    padding: 50px;
+}
+//background
+@mixin background-style{
+    background-image: $basic-gradient !important;
+    margin: 0;
+    height: 100vh;
+}

@@ -1,17 +1,49 @@
-<div>
-    <img src="stock.png" alt="logo">
-    <br>
-    <button type="button" routerLinkActive="active" routerLink="/registrati">+</button>
-    <p>Accedi</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    
+
+
+<div class="wrapper">
+    <div class="login-box">
+        
     <form [formGroup]="loginForm" (ngSubmit)="login();" >
+        
+        <div class="logo">
+            <img class="n-image" src="/assets/stock.png">
+        </div>
+    <br>
+    <button  class="btn-register" type="button" routerLinkActive="active" routerLink="/registrati">
+        <span class="material-icons" style="font-size: 50px; margin-top: 17px; font-weight: bold;"> 
+            +
+        </span>
+    </button>
+    <p class="txt-accedi">Accedi</p>
     <div class="form-group">
-        <label for="username">Nome utente</label>
+        <label for="username" class="username" class="mat-input">Nome utente</label>
         <input type="text" id="username" formControlName="username" >
     </div>
     <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password"  formControlName="password" >
+        <label for="password" class="password" class="mat-input">Password</label>
+        <input matInput type="password" id="password"  formControlName="password" >
     </div>
-    <button type="submit" id="btnSub">Login</button>
-</form>
+    
+<div>
+    <span class="password">memorizza password</span>
+                <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+                </label>
+            </div>
+            <button type="submit" id="btnSub" class="txt-accedi">Login</button>
+    </form>
+    
 </div>
+</div>
+</body></html>

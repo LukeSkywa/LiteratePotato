@@ -1,4 +1,3 @@
-
 @import '../../../assets/scss/mixin';
 @import '../../../assets/scss/variables';
 
@@ -17,7 +16,7 @@
 }
 .register-cell{
     grid-row: 2;
-} 
+}
 .btn-back{
     @include button-login;
 }
@@ -62,9 +61,10 @@
 }
 .txt-registrati{
     grid-row: 2;
-    color: white;
+    color: green;
 }
 .wrapper{
     background-color: white;
     height: 100vh;
 }
+
