@@ -2,7 +2,7 @@ export interface ProdottoItemModule {
   id :number;
   Nome:string;
   produttore:string;
-  Genere:number;
+  img:string;
   taglia:number;
   prezzo:number;
   preferito:boolean;

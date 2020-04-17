@@ -1,0 +1,85 @@
+{
+    "prodotti": [{
+            "id": 1,
+            "Nome": "polo",
+            "produttore": "ralph lauren",
+            "img": "polo.jpg",
+            "taglia": 32,
+            "prezzo": 40,
+            "preferito": true,
+            "nascosto": false
+        },
+        {
+            "id": 2,
+            "Nome": "maglietta",
+            "produttore": "fila",
+            "img": "maglietta.jpg",
+            "taglia": 35,
+            "prezzo": 40,
+            "preferito": true,
+            "nascosto": false
+
+        },
+        {
+            "id": 3,
+            "Nome": "orologio",
+            "produttore": "gucci",
+            "img": "orologio.jpg",
+            "taglia": 18,
+            "prezzo": 150,
+            "preferito": false,
+            "nascosto": false
+        },
+        {
+            "id": 4,
+            "Nome": "giacca",
+            "produttore": "tommy hilfiger",
+            "img": "giacca.jpg",
+            "taglia": 36,
+            "prezzo": 70,
+            "preferito": true,
+            "nascosto": false
+        },
+        {
+            "id": 5,
+            "Nome": "occhiali",
+            "produttore": "ray ban",
+            "img": "occhiali.jpg",
+            "taglia": 1,
+            "prezzo": 40,
+            "preferito": true,
+            "nascosto": true
+
+        },
+        {
+            "id": 6,
+            "Nome": "jeans",
+            "produttore": "levis",
+            "img": "jeans.jpg",
+            "taglia": 40,
+            "prezzo": 80,
+            "preferito": true,
+            "nascosto": false
+        },
+        {
+            "id": 7,
+            "Nome": "felpa",
+            "produttore": "addidas",
+            "img": "felpa.jpg",
+            "taglia": 32,
+            "prezzo": 50,
+            "preferito": false,
+            "nascosto": false
+        },
+        {
+            "id": 8,
+            "Nome": "scarpe",
+            "produttore": "nike",
+            "img": "scarpe.jpg",
+            "taglia": 41,
+            "prezzo": 60,
+            "preferito": true,
+            "nascosto": false
+        }
+    ]
+}

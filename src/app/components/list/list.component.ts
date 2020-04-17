@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { ProdottoItemModule } from 'src/app/model/prodotto-item/prodotto-item.module';
-import { ProdottiListService } from 'src/app/services/prodotti-list.service';
+import { MyHttpService } from 'src/app/services/my-http.service';
 
 @Component({
   selector: 'app-list',
@@ -9,22 +9,43 @@ import { ProdottiListService } from 'src/app/services/prodotti-list.service';
 })
 export class ListComponent implements OnInit {
 
-  gameList:ProdottoItemModule[];
-  constructor( private gameListService: ProdottiListService) { 
-    this.gameList = this.gameListService.getGameList();
+  prodottoList:ProdottoItemModule[];
+  prodottoListAll:ProdottoItemModule[];
+  startPage: number;
+  limitPage: number;
+
+  constructor(private myHttp:MyHttpService) { 
+    this.startPage = 0;
+    this.limitPage = 5;
   }
+
+recoverList(){
+  this.myHttp.getList().subscribe(value=>{
+    this.prodottoListAll=value.body;
+    this.showAll();
+  })
+}
 
   ngOnInit(): void {
+    this.recoverList();
   }
-
+  showMoreItems()
+  {
+     this.limitPage = Number(this.limitPage) + 5;        
+  }
+  showLessItems()
+  {
+    this.limitPage = Number(this.limitPage) - 5;
+  }
+  
   showAll(){
-    this.gameList=[...this.gameList]
+    this.prodottoList=[...this.prodottoListAll]
   }
   showFavorite(){
-    this.gameList=this.gameList.filter(film=>film.preferito);
+    this.prodottoList=this.prodottoListAll.filter(prodotto=>prodotto.preferito);
   }
   showHidden(){
-    this.gameList=this.gameList.filter(film=>film.nascosto);
+    this.prodottoList=this.prodottoListAll.filter(prodotto=>prodotto.nascosto);
   }
 
 

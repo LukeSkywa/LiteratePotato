@@ -9,7 +9,7 @@
     height: 50px;
 }
 
-.film-box {
+.prodotto-box {
     display: grid;
     grid-template-columns: 1fr 10fr 1fr 1fr 1fr;
     background-color: rgba(255, 255, 255, 0.856);
@@ -35,7 +35,7 @@
     grid-template-columns: 1fr 200px 1fr;
 }
 
-.film-image {
+.prodotto-image {
     height: 145px;
     width: 105px;
     padding: 10px;
