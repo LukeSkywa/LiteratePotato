@@ -1,0 +1,70 @@
+
+@import '../../../assets/scss/mixin';
+@import '../../../assets/scss/variables';
+
+.registration-box{
+    @include box-style;
+}
+
+.register-form{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    height: 450px;
+    width: 350px;
+    justify-items: center;
+    @include box-form-style;
+}
+.register-cell{
+    grid-row: 2;
+} 
+.btn-back{
+    @include button-login;
+}
+:hover.btn-back{
+    background-color: #7fa3d1;
+}
+.logo{
+    grid-row: 1;
+    justify-self: center;
+}
+.username{
+    grid-row: 3;
+    height:40px;
+    width: 300px;
+}
+.password{
+    grid-row: 4;
+    height:40px;
+    width: 300px;
+}
+.icon{
+    @include icon-style;
+}
+.mat-label{
+    margin-left: 10px;
+    color:white;
+    font-size: 20px;
+}
+.mat-input{
+    margin-left: 10px;
+    color:white;
+    font-size: 15px;
+}
+.mat-button{
+    @include button-transparent;
+}
+.btn-submit{
+    @include button-style;
+    grid-row: 6;
+    height:60px;
+    width:300px;
+}
+.txt-registrati{
+    grid-row: 2;
+    color: white;
+}
+.wrapper{
+    background-color: white;
+    height: 100vh;
+}
