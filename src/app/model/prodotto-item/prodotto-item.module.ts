@@ -5,4 +5,6 @@ export interface ProdottoItemModule {
   Genere:number;
   taglia:number;
   prezzo:number;
+  preferito:boolean;
+  nascosto:boolean;
 }

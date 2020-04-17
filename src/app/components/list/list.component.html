@@ -1,1 +1,14 @@
-<p>list works!</p>
+<div>
+    <button class="btn" (click)="showAll()" autofocus>Tutti</button>
+    <button class="btn" (click)="showFavorite()">Preferiti</button>
+    <button class="btn" (click)="showHidden()">Nascosti</button>
+</div>
+<ul>
+    <div class="film-box" *ngFor="let gameItem of gameList">
+        <div>
+            <h1>{{gameItem.Nome}}</h1>
+            <h3>{{gameItem.produttore}}</h3>
+        </div>
+        <span class="material-icons" style="align-self: center;">share</span>
+    </div>
+</ul>
