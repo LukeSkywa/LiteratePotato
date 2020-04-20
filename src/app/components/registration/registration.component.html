@@ -1,27 +1,19 @@
-
-<div class="login" >
- <div class="registrati">
-    <form [formGroup]="registrazioneForm" (ngSubmit)="registrazione();" >
-    <div class="logo">
-        <img class="n-image" src="/assets/stock.png">
+<div class="login">
+    <div class="registrati">
+        <button class="btn-registrati" routerLink="/login" >X</button>
     </div>
-    <br>
-    <button   class="btn-back" type="button" routerLinkActive="active" routerLink="/login">
-       <!-- <span class="material-icons" style="font-size: 45px; margin-top: 17px; font-weight: bold;">-->
-        X
-  <!--  </span>-->
-    </button>
-    <p class="txt-registrati">Registrati</p>
-    <div class="form-group">
-        <label for="username">Nome utente</label>
-        <input type="text" id="username" formControlName="username"class="inputFields" >
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password"  formControlName="password"  class="inputFields">
-    </div>
-    <div>
-    <button type="submit" id="btnSub" class="btn-accedi">Registrati</button></div>
-</form>
-</div>
-</div>
+    <form class="loginForm">
+        <div>
+            <img src="../assets/stock.png" alt="logo" class="logo">
+            <p class="title">Registrati</p>
+            <input id="email" placeholder="email" class="inputFields">
+        </div>
+        <div>
+            <input id="password" placeholder="password" class="inputFields">
+        </div>
+        <br><br>
+        <div>
+            <button type="submit" class="btn-accedi">registrati</button>
+        </div>
+    </form>
+</div> 
