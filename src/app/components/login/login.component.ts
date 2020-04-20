@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder} from '@angular/forms';
-import { LoginService } from 'src/app/services/login.service';
+import { Injectable, OnInit, Component } from '@angular/core';
+import { UsersProfile } from 'src/app/model/users-profile';
 
+import { LoginService } from 'src/app/services/login.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,9 +10,9 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  loginForm : FormGroup;
-
+  usersList: UsersProfile[];
+  
+  loginForm: FormGroup;
 
   constructor(private fb : FormBuilder, private loginService : LoginService) {
     this.loginForm=this.fb.group({
@@ -20,16 +21,12 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  login() {
-    this.loginService.eseguiLogin(this.loginForm.get("username").value,this.loginForm.get("password").value);
+  login(form) {
+     this.loginService.eseguiLogin(form);
   }
-
-  //da mettere in home
-  logout(){
-    this.loginService.eseguiLogout();
-  }
-
+ // login() {
+  // this.loginService.eseguiLogin(this.loginForm.value);
+  //}
 }

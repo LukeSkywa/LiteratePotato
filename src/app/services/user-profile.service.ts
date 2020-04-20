@@ -1,21 +1,49 @@
 import { Injectable } from '@angular/core';
-import { UsersProfile } from '../model/users-profile';
+import { UsersProfile } from 'src/app/model/users-profile';
+import { Router } from '@angular/router';
+import { MyHttpService } from './my-http.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserProfileService {
-  utRegistrati: UsersProfile[]=[
-    {email: 'aman', password: '123' },
-    {email: 'mario', password: '123'},
-  ];
+  usersList: UsersProfile[];
+/*
+  eseguiLogin(username: string, password: string) {
+    if (username != null && username !== '' 
+      && password != null && password !== '') {
+      sessionStorage.setItem("user", username);
+      sessionStorage.setItem("password", password);
+      this.router.navigateByUrl('/portale/home');
+      alert('benvenuto');
+    }else{
+      alert('login fallita');
+    }
+  }
+
+  eseguiLogout(){
+    sessionStorage.removeItem("user");
+    sessionStorage.removeItem("admin");
+    this.router.navigateByUrl('/login');
+    alert("logout effettuato, arrivederci");
+  }
+
+
+} 
+usersList: User[];
+  
+  constructor(private router:Router,private myHttpService: MyHttpService) { 
+    this.getUsers();
+  }
 
   getList(){
-    return this.utRegistrati;
+    return this.usersList;
   }
-  
+  constructor(private router:Router,private myHttpService: MyHttpService) { 
+    this.getUsers();
+  }
   checkUt(password:string, email:string):boolean{
-    const user = this.utRegistrati.find(item =>{
+    const user = this.usersList.find(item =>{
       return item.password===password && item.email===email;
     });
     if(user)
@@ -25,7 +53,7 @@ export class UserProfileService {
   }
 
   getUt(email:string, password:string): UsersProfile{
-    const user = this.utRegistrati.find(item =>{
+    const user = this.usersList.find(item =>{
       return item.password===password && item.email===email;
     });
     if(user)
@@ -36,13 +64,13 @@ export class UserProfileService {
 
   getIndexOfUt(email:string, password:string):number{
     const p=this.getUt(email,password);
-    return this.utRegistrati.indexOf(p);
+    return this.usersList.indexOf(p);
   }
 
   editUt(ut: UsersProfile, indice:number): boolean{
     //(method) Array<DatiPersonali>.indexOf(searchElement: DatiPersonali, fromIndex?: number): number
-    if(indice!=-1 && indice<this.utRegistrati.length){
-      this.utRegistrati[indice]=ut;
+    if(indice!=-1 && indice<this.usersList.length){
+      this.usersList[indice]=ut;
       return true;
     }
     else{
@@ -51,7 +79,7 @@ export class UserProfileService {
   }
 
   registrazione(ut: UsersProfile):void{
-      this.utRegistrati.push(ut); 
+      this.usersList.push(ut); 
   }
 
   control(email:string, password:string):string{
@@ -64,5 +92,6 @@ export class UserProfileService {
     }
   }
 
-  constructor() { }
+
 }
+*/

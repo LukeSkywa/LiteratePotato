@@ -13,7 +13,7 @@ export class EditGuardService implements CanActivate{
     if (sessionStorage.getItem('user') === null ) {
       return true;
     } else {
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/list');
       return false;
     }
   }
