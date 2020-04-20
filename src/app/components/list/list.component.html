@@ -16,7 +16,7 @@
     <span class="material-icons" style="align-self: center;">share</span>
     <span class="material-icons" style="align-self: center;" [matMenuTriggerFor]="menu">more_vert</span>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item>Scopri di più</button>
+        <button mat-menu-item routerLink='/detail'>Scopri di più</button>
         <button mat-menu-item (click)="(prodotto.nascosto=!prodotto.nascosto)">Nascondi</button>
     </mat-menu>
 </div>

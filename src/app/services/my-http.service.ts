@@ -14,7 +14,7 @@ export class MyHttpService {
     return this.myHttp.get<ProdottoItemModule[]>('http://localhost:3000/prodotti',{observe:'response'});
       }
     
-      putFilm(prodotto:ProdottoItemModule){
-        return this.myHttp.put('http://localhost:3000/prodotti'+prodotto.id,prodotto,{observe:'response'});
-      }
+      // putProdotto(prodotto:ProdottoItemModule){
+      //   return this.myHttp.put('http://localhost:3000/prodotti'+prodotto.id,prodotto,{observe:'response'});
+      // }
 }

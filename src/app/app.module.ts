@@ -9,12 +9,14 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ListComponent } from './components/list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     ListComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,
