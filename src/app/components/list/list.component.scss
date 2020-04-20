@@ -4,6 +4,7 @@
 
 .buttons-top {
   display: inline-block;
+  margin-right: 200px;
 }
 
 .btn {
@@ -18,12 +19,16 @@
 
 .prodotto-box {
     display: grid;
-    grid-template-columns: 1fr 10fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 10fr 0.7fr 0.7fr 0.7fr;
     background-color: white;
     border-radius: 30px;
     margin: 10px;
     padding: 10px;
     border: 0.5px solid rgb(0, 0, 0);
+}
+.prodotto-box:hover {
+  transition: all 0.4s;
+  background-color: rgb(214, 214, 214);
 }
 
 .btn-show {
@@ -49,6 +54,7 @@
     height: 120px;
     width: 105px;
     padding: 10px;
+    border-radius: 30px;
 }
 
 .btn:focus {
