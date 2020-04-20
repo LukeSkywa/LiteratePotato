@@ -7,6 +7,8 @@ import { RegistrazioneComponent } from './components/registration/registration.c
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import { MenuComponent } from './components/menu/menu.component';
+import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { ListComponent } from './components/list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegistrazioneComponent,
     MenuComponent,
+    HomeComponent,
+    FooterComponent,
     ListComponent,
   ],
   imports: [

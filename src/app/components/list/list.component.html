@@ -1,27 +1,31 @@
-<div>
-    <button class="btn" (click)="showAll()" autofocus>Tutti</button>
-    <button class="btn" (click)="showFavorite()">Preferiti</button>
-    <button class="btn" (click)="showHidden()">Nascosti</button>
-</div>
-<div class="prodotto-box" *ngFor="let prodotto of prodottoList | slice : startPage:limitPage">
-    <img class="prodotto-image" src="/assets/prodotti-img/{{prodotto.img}}">
-    <div>
-        <h1>{{prodotto.Nome}}</h1>
-        <h3>{{prodotto.produttore}}</h3>
-    </div>
-    <div class="material-icons" style="align-self: center;">
-        <span (click)="(prodotto.preferito=!prodotto.preferito)" class="material-icons" *ngIf="!(prodotto.preferito)">favorite_border</span>
-        <span (click)="(prodotto.preferito=!prodotto.preferito)" class="material-icons" *ngIf="(prodotto.preferito)">favorite</span>
-    </div>
-    <span class="material-icons" style="align-self: center;">share</span>
-    <span class="material-icons" style="align-self: center;" [matMenuTriggerFor]="menu">more_vert</span>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink='/detail'>Scopri di più</button>
-        <button mat-menu-item (click)="(prodotto.nascosto=!prodotto.nascosto)">Nascondi</button>
-    </mat-menu>
-</div>
-<div class="btn-box">
-    <button class="btn-show" *ngIf="limitPage < prodottoList.length" (click)="showMoreItems()">Show More</button>
+<app-menu></app-menu>
+<div class="wrapper">
+  <div class="buttons-top">
+      <button class="btn" (click)="showAll()" autofocus>Tutti</button>
+      <button class="btn" (click)="showFavorite()">Preferiti</button>
+      <button class="btn" (click)="showHidden()">Nascosti</button>
+  </div>
+  <div class="prodotto-box" *ngFor="let prodotto of prodottoList | slice : startPage:limitPage">
+      <img class="prodotto-image" src="/assets/prodotti-img/{{prodotto.img}}">
+      <div>
+          <h1 class="standard-text">{{prodotto.Nome}}</h1>
+          <h3 class="standard-text">{{prodotto.produttore}}</h3>
+      </div>
+      <div class="material-icons" style="align-self: center;">
+          <span (click)="(prodotto.preferito=!prodotto.preferito)" class="material-icons" *ngIf="!(prodotto.preferito)">favorite_border</span>
+          <span (click)="(prodotto.preferito=!prodotto.preferito)" class="material-icons" *ngIf="(prodotto.preferito)">favorite</span>
+      </div>
+      <span class="material-icons" style="align-self: center;">share</span>
+      <span class="material-icons" style="align-self: center;" [matMenuTriggerFor]="menu">more_vert</span>
+      <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink='/detail'>Scopri di più</button>
+          <button mat-menu-item (click)="(prodotto.nascosto=!prodotto.nascosto)">Nascondi</button>
+      </mat-menu>
+  </div>
+  <div class="btn-box">
+      <button class="btn-show" *ngIf="limitPage < prodottoList.length" (click)="showMoreItems()">Show More</button>
 
-    <button class="btn-show" *ngIf="limitPage > 5" (click)="showLessItems()">Show Less</button>
+      <button class="btn-show" *ngIf="limitPage > 5" (click)="showLessItems()">Show Less</button>
+  </div>
 </div>
+<app-footer></app-footer>

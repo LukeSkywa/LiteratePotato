@@ -1,0 +1,29 @@
+
+/* PULSANTI MENU */
+
+.elenco{
+  display: flex;
+  float:left;
+  text-decoration: none;
+  padding:1.5em;
+  transition: all 0.5s;
+  cursor: pointer;
+  color: #fff;
+  border: 1.6px solid transparent;
+  margin-right: 2em;
+  font-size: 1.2em;
+
+}
+.elenco:hover{
+  border-bottom: 1.6px solid #fff;
+}
+
+img {
+  display:flex;
+  float: right;
+  height: 50px;
+  margin: 0.7em;
+  margin-right: 4em;
+
+
+}
