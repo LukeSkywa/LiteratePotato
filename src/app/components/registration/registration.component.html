@@ -1,26 +1,27 @@
 
-<div class="wrapper" >
- <div class="registration-box">
+<div class="login" >
+ <div class="registrati">
     <form [formGroup]="registrazioneForm" (ngSubmit)="registrazione();" >
     <div class="logo">
         <img class="n-image" src="/assets/stock.png">
     </div>
     <br>
     <button   class="btn-back" type="button" routerLinkActive="active" routerLink="/login">
-        <span class="material-icons" style="font-size: 45px; margin-top: 17px; font-weight: bold;">
+       <!-- <span class="material-icons" style="font-size: 45px; margin-top: 17px; font-weight: bold;">-->
         X
-    </span>
+  <!--  </span>-->
     </button>
     <p class="txt-registrati">Registrati</p>
     <div class="form-group">
         <label for="username">Nome utente</label>
-        <input type="text" id="username" formControlName="username" >
+        <input type="text" id="username" formControlName="username"class="inputFields" >
     </div>
     <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" id="password"  formControlName="password" >
+        <input type="password" id="password"  formControlName="password"  class="inputFields">
     </div>
-    <button type="submit" id="btnSub">Registrati</button>
+    <div>
+    <button type="submit" id="btnSub" class="btn-accedi">Registrati</button></div>
 </form>
 </div>
 </div>

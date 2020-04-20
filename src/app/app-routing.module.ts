@@ -10,7 +10,7 @@ import { RegistrazioneComponent } from './components/registration/registration.c
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
       { path: 'registrati', component:RegistrazioneComponent, canActivate: [EditGuardService]},
-      { path: '', redirectTo: '/login', pathMatch: 'full' },
+      { path: '', redirectTo: '/registrati', pathMatch: 'full' },
 ];
 
 @NgModule({
