@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ListComponent } from './components/list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FooterComponent,
     ListComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,
