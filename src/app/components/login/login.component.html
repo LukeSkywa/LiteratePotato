@@ -23,7 +23,7 @@
       </div>
 
       <div class="login-logo">
-        <img class="logo" src="/assets/logo-stockx.png">
+        <img class="logo" src="/assets/logo-stocx.png">
       </div>
       <div class="login-top-label">
         <p class="accedi">Accedi</p>
@@ -31,43 +31,48 @@
 
         <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value);" >
 
-      <div class="form-input-section1">
-        <div class="form-group">
-          <div class="form-span-left">
-            <span class="material-icons">
-              person
-            </span>
+      <div class="form-section1">
+        <div class="form-input-section1">
+          <div class="form-group">
+            <div class="form-span-left">
+              <span class="material-icons">
+                person
+              </span>
+            </div>
+            <div class="form-label">
+              <label for="username" class="username" > Nome utente </label>
+            </div>
+            <div class="form-input">
+              <input class="inputFields" type="text" id="username" formControlName="username" >
+            </div>
+            <div class="form-span-right"> </div>
           </div>
-          <div class="form-label">
-            <label for="username" class="username" id="username" > Nome utente </label>
-          </div>
-          <div class="form-input">
-            <input class="inputFields" type="text" id="username" formControlName="username" >
-          </div>
-          <div class="form-span-right"> </div>
         </div>
       </div>
 
-      <div class="form-input-section2">
-        <div class="form-group">
-          <div class="form-span-left">
-            <span class="material-icons">
-              enhanced_encryption
-            </span>
-          </div>
-          <div class="form-label">
-            <label for="password" class="password-label" id="password" > Password </label>
-          </div>
-          <div class="form-input">
-            <input class="inputFields" type="password" id="password"  formControlName="password" >
-          </div>
-          <div class="form-span-right">
-            <span class="material-icons">
-              visibility_off
-            </span>
+      <div class="form-section2">
+        <div class="form-input-section2">
+          <div class="form-group">
+            <div class="form-span-left">
+              <span class="material-icons">
+                enhanced_encryption
+              </span>
+            </div>
+            <div class="form-label">
+              <label for="password" class="password-label" > Password </label>
+            </div>
+            <div class="form-input">
+              <input class="inputFields" type="password" id="password"  formControlName="password" >
+            </div>
+            <div class="form-span-right">
+              <span class="material-icons">
+                visibility_off
+              </span>
+            </div>
           </div>
         </div>
       </div>
+
 
         <div class="memorizza">
           <label class="switch">
