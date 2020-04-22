@@ -1,10 +1,10 @@
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Login</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Login</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
   <div class="wrapper">
 
@@ -14,64 +14,57 @@
     <div class="grid-left"></div>
 
     <div class="login">
-      <div class="registrati">
-        <button  class="btn-register" type="button" routerLinkActive="active" routerLink="/registrati">
-          <span class="material-icons" >
-            +
-          </span>
-        </button>
-      </div>
 
       <div class="login-logo">
         <img class="logo" src="/assets/logo-stocx.png">
       </div>
       <div class="login-top-label">
-        <p class="accedi">Accedi</p>
+        <p class="label-accedi">Accedi</p>
       </div>
 
-        <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value);" >
+      <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value);">
 
-      <div class="form-section1">
-        <div class="form-input-section1">
-          <div class="form-group">
-            <div class="form-span-left">
-              <span class="material-icons">
-                person
-              </span>
-            </div>
-            <div class="form-label">
-              <label for="username" class="username" > Nome utente </label>
-            </div>
-            <div class="form-input">
-              <input class="inputFields" type="text" id="username" formControlName="username" >
-            </div>
-            <div class="form-span-right"> </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-section2">
-        <div class="form-input-section2">
-          <div class="form-group">
-            <div class="form-span-left">
-              <span class="material-icons">
-                enhanced_encryption
-              </span>
-            </div>
-            <div class="form-label">
-              <label for="password" class="password-label" > Password </label>
-            </div>
-            <div class="form-input">
-              <input class="inputFields" type="password" id="password"  formControlName="password" >
-            </div>
-            <div class="form-span-right">
-              <span class="material-icons">
-                visibility_off
-              </span>
+        <div class="form-section1">
+          <div class="form-input-section1">
+            <div class="form-group">
+              <div class="form-span-left">
+                <span class="material-icons">
+                  person
+                </span>
+              </div>
+              <div class="form-label">
+                <label for="username" class="username-label"> Nome utente </label>
+              </div>
+              <div class="form-input">
+                <input class="inputFields" type="text" id="username" formControlName="username">
+              </div>
+              <div class="form-span-right"> </div>
             </div>
           </div>
         </div>
-      </div>
+
+        <div class="form-section2">
+          <div class="form-input-section2">
+            <div class="form-group">
+              <div class="form-span-left">
+                <span class="material-icons">
+                  enhanced_encryption
+                </span>
+              </div>
+              <div class="form-label">
+                <label for="password" class="password-label"> Password </label>
+              </div>
+              <div class="form-input">
+                <input class="inputFields" type="password" id="password" formControlName="password">
+              </div>
+              <div class="form-span-right">
+                <span class="material-icons">
+                  visibility_off
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
         <div class="memorizza">
@@ -82,15 +75,19 @@
           <span class="password"> Memorizza password </span>
         </div>
         <div class="form-bottom-btn">
-          <button class="btn-login" type="submit" >
+          <button class="button-accedi" type="submit">
             <span> Accedi </span>
           </button>
         </div>
 
-        </form>
-      </div>
+      </form>
     </div>
-  </body>
 
+    <div class="button-registrati">
+      <button class="icona-registrati" routerLinkActive="active" routerLink="/registrati">
+        <span class="material-icons"> add </span>
+      </button>
+    </div>
 
-
+  </div>
+</body>

@@ -35,16 +35,21 @@
   box-shadow: -9px -9px 1px rgb(141, 195, 209);
 }
 .login-logo {
+  margin-top: 24px;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .login-top-label {
-  height: 25px;
+  margin-bottom: 20px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.label-accedi {
+  font-size: 2em;
 }
 .loginForm {
     height: 440px;
@@ -65,14 +70,12 @@
 .inputFields {
     //margin: 15px 0;
     font-size: 16px;
-    width: 170px;
-    border: 1px solid white;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    width: 154px;
+    border: none;
     background-color: transparent;
     outline: none;
     color: white;
+    font-weight: bold;
 }
 .memorizza {
   height: 30px;
@@ -84,7 +87,7 @@
     margin-left: 35px;
 }
 .switch input {
-    opacity: 0;
+    opacity: 1;
     width: 0;
     height: 0;
 }
@@ -169,8 +172,8 @@ input:checked+.slider:before {
 }
 
 //bottone accedi
-button {
-    margin-top: 6.5px;
+.button-accedi {
+    margin-top: 8.5px;
     margin-bottom: 25px;
     position: relative;
     outline: none;
@@ -179,15 +182,16 @@ button {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    height: 50px;
-    width: 210px;
+    height: 64px;
+    width: 250px;
     background-color: #ffffff;
-    border: 1px solid rgba(22, 76, 167, 0.6);
+    border: none;
+    box-shadow: 3px 0px 4px grey;
 }
 
-button span {
-    color: #164ca7;
-    font-size: 13px;
+.button-accedi span {
+    color: #1556c5;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.7px;
 }
@@ -281,6 +285,9 @@ button:active {
   grid-template-columns: 18% 64% 18%;
   grid-template-rows: 30px 30px;
 }
+.username-label, .password-label {
+  padding-top: 6px;
+}
 .form-span-left {
   grid-column: 1/2;
   grid-row: 1/3;
@@ -314,4 +321,31 @@ button:active {
 .material-icons {
   font-size: 2.2em;
   margin-right: 8px;
+}
+
+
+.button-registrati {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: rgb(44, 107, 224);
+  border-color: black;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  left: 780px;
+  top: -580px;
+  transform: translateY(50%);
+  box-shadow: 3px 0px 4px grey;
+}
+
+.icona-registrati {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  margin-top: 17px;
+  margin-left: 12px;
+  color: #fff;
+  outline: none;
+  font-size: 1.6em;
 }
