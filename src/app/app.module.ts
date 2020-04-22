@@ -12,7 +12,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ListComponent } from './components/list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatSliderModule } from '@angular/material/slider';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatSelectModule} from '@angular/material/select';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +40,17 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSliderModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatInputModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatIconModule,
+    MatRadioModule,
+    MatSelectModule,
 
   ],
   providers: [],
