@@ -2,7 +2,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: 39% 22% 39%;
-  grid-template-rows: 100px 485px 100px;
+  grid-template-rows: 100px 495px 100px;
   width: 100%;
   background-color: white;
 }
@@ -68,7 +68,6 @@
     font-size: 23pt;
 }
 .inputFields {
-    //margin: 15px 0;
     font-size: 16px;
     width: 154px;
     border: none;
@@ -267,6 +266,7 @@ button:active {
   align-items: center;
   background: -webkit-linear-gradient(left, rgba(0, 76, 240, 0.897) 0%, rgb(5, 215, 252) 100%);
   border-bottom: 2px solid white;
+  border-radius: 2px;
 }
 .form-input-section2 {
   width: 90%;
@@ -278,6 +278,7 @@ button:active {
   margin-bottom: 10px;
   background: -webkit-linear-gradient(left, rgba(0, 76, 240, 0.897) 0%, rgb(5, 215, 252) 100%);
   border-bottom: 2px solid white;
+  border-radius: 2px;
 }
 .form-group {
   width: 92%;
@@ -334,7 +335,7 @@ button:active {
   cursor: pointer;
   position: relative;
   left: 780px;
-  top: -580px;
+  top: -590px;
   transform: translateY(50%);
   box-shadow: 3px 0px 4px grey;
 }
@@ -348,4 +349,12 @@ button:active {
   color: #fff;
   outline: none;
   font-size: 1.6em;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
 }
