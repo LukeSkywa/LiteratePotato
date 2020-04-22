@@ -1,0 +1,66 @@
+<div class="profile-grid">
+    <div class="title">
+        Benvenuto
+    </div>
+    <div class="user-name">
+        {{userLog.name}} {{userLog.surname}}
+    </div>
+
+    <div class="img-profile-wrapper">
+        <img class="img-profile" src="/assets/profile-img/{{userLog.image}}">
+    </div>
+
+    <div class="line"></div>
+
+    <div class="info">
+        <div class="space">
+            <label for="name">Name</label>
+        </div>
+        <div class="space">
+            <label for="surname">Surname</label>
+        </div>
+        <div class="space">
+            <label for="gender">Gender</label>
+        </div>
+        <div class="space">
+            <label for="email">Email</label>
+        </div>
+        <div class="space">
+            <label for="phone">Phone</label>
+        </div>
+        <div class="space">
+            <label for="password">Password</label>
+        </div>
+    </div>
+    <div class="userInfo">
+
+        <div class="space">
+            <div id="name">{{userLog.name}}</div>
+        </div>
+
+        <div class="space">
+            <div id="surname">{{userLog.surname}}</div>
+        </div>
+
+        <div class="space">
+            <div id="gender">{{userLog.gender}}</div>
+        </div>
+
+        <div class="space">
+            <div id="email">{{userLog.email}}</div>
+        </div>
+
+        <div class="space">
+            <div id="phone">{{userLog.phone}}</div>
+        </div>
+
+        <div class="space">
+            <div id="password">{{userLog.password}}</div>
+        </div>
+      
+        
+    </div>
+    <div class="btn-grid">
+        <button class="btn" (click)="changePage()">Modifica</button>
+    </div>
+</div>

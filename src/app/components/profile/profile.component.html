@@ -1,0 +1,9 @@
+<div>
+    <app-show-profile *ngIf="showProfileDetail; else showForm"></app-show-profile>
+    <ng-template #showForm>
+        <app-edit-profile (profiloChanged)="saveProfile($event)"></app-edit-profile>
+    </ng-template>
+</div>
+
+
+
