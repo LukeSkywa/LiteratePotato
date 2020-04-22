@@ -1,49 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Login</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    
-<div class="login">
-    <div class="registrati">
-     <button  class="btn-register" type="button" routerLinkActive="active" routerLink="/registrati">
-        <span class="material-icons" > 
+  <div class="wrapper">
+
+    <div class="grid-top"></div>
+    <div class="grid-bottom"></div>
+    <div class="grid-right"></div>
+    <div class="grid-left"></div>
+
+    <div class="login">
+      <div class="registrati">
+        <button  class="btn-register" type="button" routerLinkActive="active" routerLink="/registrati">
+          <span class="material-icons" >
             +
-        </span>
-    </button>   
-    <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value);" >
-        
-        <div >
-            <img class="logo" src="/assets/stock.png">
+          </span>
+        </button>
+      </div>
+
+      <div class="login-logo">
+        <img class="logo" src="/assets/logo-stockx.png">
+      </div>
+      <div class="login-top-label">
+        <p class="accedi">Accedi</p>
+      </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value);" >
+
+      <div class="form-input-section1">
+        <div class="form-group">
+          <div class="form-span-left">
+            <span class="material-icons">
+              person
+            </span>
+          </div>
+          <div class="form-label">
+            <label for="username" class="username" id="username" > Nome utente </label>
+          </div>
+          <div class="form-input">
+            <input class="inputFields" type="text" id="username" formControlName="username" >
+          </div>
+          <div class="form-span-right"> </div>
         </div>
-    <br>
-    
-    <p class="accedi">Accedi</p>
-    <div class="form-group">
-        <label for="username" class="username" id="username" >Nome utente</label>
-        <input type="text" id="username" formControlName="username" >
+      </div>
+
+      <div class="form-input-section2">
+        <div class="form-group">
+          <div class="form-span-left">
+            <span class="material-icons">
+              enhanced_encryption
+            </span>
+          </div>
+          <div class="form-label">
+            <label for="password" class="password-label" id="password" > Password </label>
+          </div>
+          <div class="form-input">
+            <input class="inputFields" type="password" id="password"  formControlName="password" >
+          </div>
+          <div class="form-span-right">
+            <span class="material-icons">
+              visibility_off
+            </span>
+          </div>
+        </div>
+      </div>
+
+        <div class="memorizza">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <span class="password"> Memorizza password </span>
+        </div>
+        <div class="form-bottom-btn">
+          <button class="btn-login" type="submit" >
+            <span> Accedi </span>
+          </button>
+        </div>
+
+        </form>
+      </div>
     </div>
-    <div class="form-group">
-        <label for="password" class="password" id="password" >Password</label>
-        <input  type="password" id="password"  formControlName="password" >
-    </div>
-<div>
-    <span class="password">memorizza password</span>
-                <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>  
-                </label>
-            </div>
-            <button type="submit" >
-                <span>Login</span>
-            </button>
-    </form>
-    
-</div>
-</div>
-</body>
-</html>
+  </body>
+
+
+
