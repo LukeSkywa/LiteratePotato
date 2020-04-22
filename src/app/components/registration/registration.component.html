@@ -10,7 +10,8 @@
             <input id="email" placeholder="email" class="inputFields">
         </div>
         <div>
-            <input id="password" placeholder="password" class="inputFields">
+            <input id="password" placeholder="password" class="inputFields" [type]="show ? 'text' : 'password'">
+            <img (click)="password()" src="../../../assets/icon/eye.png" alt="occhio" class="eye">
         </div>
         <br><br>
         <div>

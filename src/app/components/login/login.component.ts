@@ -13,10 +13,10 @@ export class LoginComponent implements OnInit {
   usersList: UsersProfile[];
   
   loginForm: FormGroup;
-
+  show:boolean;
   constructor(private fb : FormBuilder, private loginService : LoginService) {
     this.loginForm=this.fb.group({
-      username : "",
+      username : "", 
       password : ""
     })
   }
@@ -29,4 +29,8 @@ export class LoginComponent implements OnInit {
  // login() {
   // this.loginService.eseguiLogin(this.loginForm.value);
   //}
+  password() {
+    this.show = !this.show;
+    console.log(this.show);
+  }
 }

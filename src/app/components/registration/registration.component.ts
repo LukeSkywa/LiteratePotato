@@ -10,12 +10,13 @@ import { LoginService } from 'src/app/services/login.service';
 export class RegistrazioneComponent implements OnInit {
 
   registrazioneForm : FormGroup;
-
+  show: boolean;
   constructor(private fb : FormBuilder , private loginService : LoginService) {
     this.registrazioneForm=this.fb.group({
       username : "",
       password : ""
-    })
+    });
+    this.show = false;
   }
 
   ngOnInit(): void {
@@ -23,5 +24,9 @@ export class RegistrazioneComponent implements OnInit {
 
   registrazione(form){
     this.loginService.addUser(form);
+  }
+  password() {
+    this.show = !this.show;
+    console.log(this.show);
   }
 }
