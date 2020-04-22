@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -22,6 +23,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { CardsComponent } from './components/cards/cards.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     HomeComponent,
     FooterComponent,
     ListComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatIconModule,
     MatRadioModule,
     MatSelectModule,
+  //  NgbModule,
 
   ],
   providers: [],

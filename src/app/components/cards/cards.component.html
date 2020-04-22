@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="card" *ngFor="let serie of serie;">
+        <img src="../assets/img/{{serie.nome | lowercase | removewhitespaces}}.jpg" class="img">
+        <div class="content">
+            <h1 class="title">{{prodotti.nome}}</h1>
+            <p class="description">{{prodotti.produttore}}</p>
+        </div>
+    </div>
+    <div class="btn">
+        <button>Mostra di più</button>
+    </div>
+</div>

@@ -13,8 +13,8 @@ export class RegistrazioneComponent implements OnInit {
   show: boolean;
   constructor(private fb : FormBuilder , private loginService : LoginService) {
     this.registrazioneForm=this.fb.group({
-      username : "",
-      password : ""
+      username : '',
+      password : ''
     });
     this.show = false;
   }
