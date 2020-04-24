@@ -5,7 +5,8 @@
       <button class="btn" (click)="showFavorite()">Preferiti</button>
       <button class="btn" (click)="showHidden()">Nascosti</button>
   </div>
-  <div class="prodotto-box" *ngFor="let prodotto of prodottoList | slice : startPage:limitPage">
+  <div class="cards-section">
+    <div class="prodotto-box" *ngFor="let prodotto of prodottoList | slice : startPage:limitPage">
       <img class="prodotto-image" src="/assets/prodotti-img/{{prodotto.img}}">
       <div>
           <h1 class="standard-text">{{prodotto.Nome}}</h1>
@@ -21,7 +22,9 @@
           <button mat-menu-item routerLink='/detail'>Scopri di più</button>
           <button mat-menu-item (click)="(prodotto.nascosto=!prodotto.nascosto)">Nascondi</button>
       </mat-menu>
+    </div>
   </div>
+
   <div class="btn-box">
       <button class="btn-show" *ngIf="limitPage < prodottoList.length" (click)="showMoreItems()">Show More</button>
 

@@ -36,7 +36,7 @@ recoverList() {
     this.limitPage = Number(this.limitPage) - 5;
   }
   showAll() {
-    this.prodottoList = [...this.prodottoListAll]
+    this.prodottoList = [...this.prodottoListAll];
   }
   showFavorite() {
     this.prodottoList = this.prodottoListAll.filter(prodotto => prodotto.preferito);

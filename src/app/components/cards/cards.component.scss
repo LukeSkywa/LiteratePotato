@@ -1,0 +1,35 @@
+
+
+.btn-box {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  padding-top: 200px;
+}
+
+.prodotto-image {
+  height: auto;
+  width: 300px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.prodotto-box {
+  height: auto;
+  width: auto;
+  max-width: 310px;
+  background-color: aqua;
+  margin-bottom: 50px;
+  display: grid;
+  border-radius: 30px;
+  background-color: white;
+
+    h1,h3,span {
+      color: black;
+    }
+}
+
+.cards-section {
+  max-height: 800px !important;
+  display: inline;
+}
