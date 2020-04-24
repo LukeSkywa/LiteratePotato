@@ -1,5 +1,5 @@
 export interface UsersProfile {
-    //[x: string]: any;
+    
     id:number;
     admin: string;
     email: string;

@@ -11,7 +11,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   usersList: UsersProfile[];
-  
   loginForm: FormGroup;
   show:boolean;
   constructor(private fb : FormBuilder, private loginService : LoginService) {

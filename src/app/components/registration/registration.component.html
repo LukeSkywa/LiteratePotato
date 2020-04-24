@@ -1,22 +1,85 @@
-<div class="login">
-    <div class="registrati">
-        <button class="btn-registrati" routerLink="/login" >X</button>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Login</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+  <div class="wrapper">
+
+    <div class="grid-top"></div>
+    <div class="grid-bottom"></div>
+    <div class="grid-right"></div>
+    <div class="grid-left"></div>
+
+    <div class="login">
+
+      <div class="login-logo">
+        <img class="logo" src="/assets/logo-stocx.png">
+      </div>
+      <div class="login-top-label">
+        <p class="label-accedi">Registrati</p>
+      </div>
+
+      <form [formGroup]="registrazioneForm">
+
+        <div class="form-section1">
+          <div class="form-input-section1">
+            <div class="form-group">
+              <div class="form-span-left">
+                <span class="material-icons">
+                  person
+                </span>
+              </div>
+              <div class="form-label">
+                <label for="username" class="username-label"> Nome utente </label>
+              </div>
+              <div class="form-input">
+                <input id="username" placeholder="username" class="inputFields" formControlName="username">
+              </div>
+              <div class="form-span-right"> </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section2">
+          <div class="form-input-section2">
+            <div class="form-group">
+              <div class="form-span-left">
+                <span class="material-icons">
+                  enhanced_encryption
+                </span>
+              </div>
+              <div class="form-label">
+                <label for="password" class="password-label"> Password </label>
+              </div>
+              <div class="form-input">
+                <input id="password" placeholder="password" class="inputFields" [type]="show ? 'text' : 'password'" formControlName="password">
+              </div>
+              <div class="form-span-right">
+                <span class="material-icons">
+                  <img (click)="password()" src="../../../assets/icon/eye.png" alt="occhio" class="eye">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-bottom-btn">
+          <button class="button-registrati" type="submit" (click)="registrazione()">
+            <span> Registrati </span>
+          </button>
+        </div>
+
+      </form>
     </div>
-    <form [formGroup]="registrazioneForm" >
-    
-        <div>
-            <img src="../assets/stock.png" alt="logo" class="logo">
-            <br><br><br>
-            <p class="title">Registrati</p>
-            <input id="username" placeholder="email" class="inputFields" formControlName="username">  
-        </div>
-        <div>
-            <input id="password" placeholder="password" class="inputFields" [type]="show ? 'text' : 'password'" formControlName="password">
-            <img (click)="password()" src="../../../assets/icon/eye.png" alt="occhio" class="eye">
-        </div>
-        <br><br>
-        <div>
-            <button type="submit" (click)="registrazione()">registrati</button>
-        </div>
-    </form>
-</div> 
+
+    <div class="button-login">
+      <button class="icona-login" routerLinkActive="active" routerLink="/login">
+        <span class="material-icons"> clear </span>
+      </button>
+    </div>
+
+  </div>
+

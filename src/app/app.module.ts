@@ -23,7 +23,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
-//import { CardsComponent } from './components/cards/cards.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     HomeComponent,
     FooterComponent,
     ListComponent,
-  //  CardsComponent,
+    FeedbackComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatIconModule,
     MatRadioModule,
     MatSelectModule,
-  //  NgbModule,
 
   ],
   providers: [],

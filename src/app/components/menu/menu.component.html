@@ -1,13 +1,25 @@
-<nav>
+<div class="menu-wrapper">
+  <div class="elenco1"> </div>
+  <div class="elenco-element">
+    <a class="elenco" routerLink="/home" routerLinkActive="active">Homepage</a>
+  </div>
+  <div class="elenco-element">
+    <a class="elenco" routerLink="/list" routerLinkActive="active">Lista</a>
+  </div>
+  <div class="elenco-element">
+    <a class="elenco" routerLink="/cards" routerLinkActive="active">Cards</a>
+  </div>
+  <div class="elenco-element">
+    <a class="elenco" routerLink="/feedback" routerLinkActive="active">Feedback</a>
+  </div>
+  <div class="elenco-element">
+    <a class="elenco" routerLink="/profile" routerLinkActive="active">Profilo</a>
+  </div>
+  <div class="elenco-element">
+    <a class="elenco" (click)="Logout()" routerLinkActive="active">Esci</a>  
+  </div>
+  <div class="elenco-element elenco7">
+    <img src="https://stockx-assets.imgix.net/logo/stockx-homepage-logo.png?auto=compress,format">
+  </div>
 
-  <ul id="ul-nav">
-      <li class="elenco" routerLink="/home" routerLinkActive="active">Homepage</li>
-      <li class="elenco" routerLink="/list" routerLinkActive="active">Lista</li>
-      <li class="elenco" routerLink="/cards" routerLinkActive="active">Cards</li>
-      <li class="elenco" routerLink="/feedback" routerLinkActive="active">Feedback</li>
-      <li class="elenco" routerLink="/profile" routerLinkActive="active">Profilo</li>
-      <li class="elenco"  routerLinkActive="active"><a (click)="Logout()">Logout</a></li>
-
-  </ul>
-  <img src="https://stockx-assets.imgix.net/logo/stockx-homepage-logo.png?auto=compress,format">
-</nav>
+</div>
