@@ -17,7 +17,7 @@ export class CardsComponent implements OnInit {
 
   constructor(private myHttp: MyHttpService ) {
     this.startPage = 0;
-    this.limitPage = 5;
+    this.limitPage = 4;
    }
 
    recoverList() {

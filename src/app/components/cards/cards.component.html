@@ -7,17 +7,28 @@
   </div>
   <div class="cards-section">
     <div class="prodotto-box" *ngFor="let prodotto of prodottoList | slice : startPage:limitPage">
-      <img class="prodotto-image" src="/assets/prodotti-img/{{prodotto.img}}">
-      <div>
-          <h1 class="standard-text">{{prodotto.Nome}}</h1>
-          <h3 class="standard-text">{{prodotto.produttore}}</h3>
-      </div>
-      <div class="material-icons" style="align-self: center;">
+      <div class="prodotto-img-section">
+        <div class="prodotto-immagine">
+          <img class="prodotto-image" src="/assets/prodotti-img/{{prodotto.img}}">
+        </div>
+        <div class="prodotto-immagine-span-left">
+          <span class="material-icons" style="align-self: center;">share</span>
+        </div>
+        <div class="prodotto-immagine-span-right">
           <span (click)="(prodotto.preferito=!prodotto.preferito)" class="material-icons" *ngIf="!(prodotto.preferito)">favorite_border</span>
           <span (click)="(prodotto.preferito=!prodotto.preferito)" class="material-icons" *ngIf="(prodotto.preferito)">favorite</span>
+        </div>
       </div>
-      <span class="material-icons" style="align-self: center;">share</span>
-      <span class="material-icons" style="align-self: center;" [matMenuTriggerFor]="menu">more_vert</span>
+      <div class="prodotto-nome">
+          <h1 class="standard-text">{{prodotto.Nome}}</h1>
+      </div>
+      <div class="prodotto-marca">
+        <h3 class="standard-text">{{prodotto.produttore}}</h3>
+      </div>
+      <div class="prodotto-span" style="align-self: center;">
+          <span class="material-icons" style="align-self: center;" [matMenuTriggerFor]="menu">more_horiz</span>
+      </div>
+
       <mat-menu #menu="matMenu">
           <button mat-menu-item routerLink='/detail'>Scopri di più</button>
           <button mat-menu-item (click)="(prodotto.nascosto=!prodotto.nascosto)">Nascondi</button>
@@ -26,7 +37,7 @@
   </div>
 
   <div class="btn-box">
-      <button class="btn-show" *ngIf="limitPage < prodottoList.length" (click)="showMoreItems()">Show More</button>
+      <button class="btn-show" *ngIf="prodottoList && limitPage < prodottoList.length" (click)="showMoreItems()">Show More</button>
 
       <button class="btn-show" *ngIf="limitPage > 5" (click)="showLessItems()">Show Less</button>
   </div>

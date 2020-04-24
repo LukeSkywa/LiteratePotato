@@ -2,9 +2,14 @@
 /* PULSANTI MENU */
 
 .menu-wrapper {
+  z-index: 10000;
+  position: sticky;
+  top: 0px;
+  width: 100%;
   display: grid;
   grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr 2fr;
   width: 100%;
+  background: -webkit-linear-gradient(left, rgba(0, 76, 240, 0.897) 0%, rgb(5, 215, 252) 100%);
 }
 .elenco{
   text-decoration: none;
