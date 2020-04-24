@@ -5,6 +5,7 @@ import { RegistrazioneComponent } from './components/registration/registration.c
 import { ListComponent } from './components/list/list.component';
 import { HomeComponent } from './components/home/home.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'list', component: ListComponent },
     { path: 'home', component: HomeComponent },
     { path: 'feedback', component: FeedbackComponent },
+    { path: 'cards', component: CardsComponent },
 
     { path: '', redirectTo: '/login', pathMatch: 'full'},
 

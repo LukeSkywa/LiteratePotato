@@ -13,6 +13,7 @@ import { ListComponent } from './components/list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     FooterComponent,
     ListComponent,
     FeedbackComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,

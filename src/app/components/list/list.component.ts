@@ -9,44 +9,39 @@ import { MyHttpService } from 'src/app/services/my-http.service';
 })
 export class ListComponent implements OnInit {
 
-  prodottoList:ProdottoItemModule[];
-  prodottoListAll:ProdottoItemModule[];
+  prodottoList: ProdottoItemModule[];
+  prodottoListAll: ProdottoItemModule[];
   startPage: number;
   limitPage: number;
 
-  constructor(private myHttp:MyHttpService) { 
+  constructor(private myHttp: MyHttpService) {
     this.startPage = 0;
     this.limitPage = 5;
   }
 
-recoverList(){
-  this.myHttp.getList().subscribe(value=>{
-    this.prodottoListAll=value.body;
+recoverList() {
+  this.myHttp.getList().subscribe(value => {
+    this.prodottoListAll = value.body;
     this.showAll();
-  })
+  });
 }
 
   ngOnInit(): void {
     this.recoverList();
   }
-  showMoreItems()
-  {
-     this.limitPage = Number(this.limitPage) + 5;        
+  showMoreItems() {
+     this.limitPage = Number(this.limitPage) + 5;
   }
-  showLessItems()
-  {
+  showLessItems() {
     this.limitPage = Number(this.limitPage) - 5;
   }
-  
-  showAll(){
-    this.prodottoList=[...this.prodottoListAll]
+  showAll() {
+    this.prodottoList = [...this.prodottoListAll]
   }
-  showFavorite(){
-    this.prodottoList=this.prodottoListAll.filter(prodotto=>prodotto.preferito);
+  showFavorite() {
+    this.prodottoList = this.prodottoListAll.filter(prodotto => prodotto.preferito);
   }
-  showHidden(){
-    this.prodottoList=this.prodottoListAll.filter(prodotto=>prodotto.nascosto);
+  showHidden() {
+    this.prodottoList = this.prodottoListAll.filter(prodotto => prodotto.nascosto);
   }
-
-
 }
