@@ -23,7 +23,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { CardsComponent } from './components/cards/cards.component';
+//import { CardsComponent } from './components/cards/cards.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,7 @@ import { CardsComponent } from './components/cards/cards.component';
     HomeComponent,
     FooterComponent,
     ListComponent,
-    CardsComponent,
+  //  CardsComponent,
   ],
   imports: [
     BrowserModule,
