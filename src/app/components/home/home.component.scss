@@ -27,7 +27,7 @@
 }
 .grid-right-bottom {
   grid-column: 2;
-  grid-row: 3/5;
+  grid-row: 3.6/5;
 }
 
 .grid-right-bottom img{
@@ -36,13 +36,224 @@
 }
 
 h1 {
-  margin: 0.3em;
+  margin: 0.5em;
   margin-left: 0.2em;
-  font-size: 5.8em;
+  font-size: 9.8em;
 }
 h2 {
-  margin:0.4em;
-  margin-left: 0.6em;
+  margin:0.8em;
+  margin-left: 1.4em;
+  font-size: 2em;
+}
+#proparallax {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  height: 300px;
+  width: 500px;
+  //border: 10px solid black;
+  box-shadow: 0px 8px 10px 8px rgba(1, 204, 255, 0.993);
 }
 
+#proparallax img {
+  position: absolute;
+  height: 300px;
+  width: 500px;
+  overflow: hidden;
+  //object-fit: cover;
+}
 
+@keyframes parallax_prima {
+  /* controls img.prima movement */
+  0% {
+      /* .imageloaded */
+      height: 300px;
+      width: 500px;
+      left: 0rem;
+      opacity: 1;
+  }
+  /* .imagehold runs from 0 to 27.77% */
+  27.77% {
+      /* .imageloaded */
+      width: 500px;
+      height: 300px;
+      left: 0rem;
+  }
+  27.78% {
+      /* .imagepreunload */
+      width: 500px;
+      height: 300px;
+      left: 0rem;
+      right: 50rem;
+  }
+  33.33% {
+      /* .imageunloaded */
+      height: 300px;
+      width: 0px;
+      left: 0rem;
+      right: 0rem;
+      opacity: 1;
+  }
+  33.34% {
+      /* imageoff */
+      opacity: 0;
+  }
+  94.43% {
+      /* .imageon */
+      left: 0rem;
+      opacity: 0;
+  }
+  94.44% {
+      /* .imageinitial */
+      height: 300px;
+      width: 0px;
+      left: 50rem;
+      opacity: 1;
+  }
+  100% {
+      /* .imageloaded */
+      width: 500px;
+      left: 0rem;
+      opacity: 1;
+  }
+}
+@keyframes parallax_seconda {
+  /* controls img.seconda movement */
+  0% {
+      /* .imageoff */
+      opacity: 0;
+  }
+  27.77% {
+      /* .imageon */
+      left: 0rem;
+      opacity: 0;
+  }
+  27.78% {
+      /* .imageinitial */
+      width: 0rem;
+      height: 300px;
+      left: 50rem;
+      opacity: 1;
+  }
+  33.33% {
+      /* .imageloaded */
+      width: 500px;
+      left: 0rem;
+  }
+  /* .imagehold runs from 33.34% - 61.10% */
+  61.10% {
+      /* .imageloaded */
+      width: 500px;
+      left: 0rem;
+  }
+  61.11% {
+      /* .imagepreunload */
+      width: 500px;
+      left: 0rem;
+      right: 50rem;
+  }
+  66.67% {
+      /* .imageunloaded */
+      width: 0rem;
+      right: 0rem;
+      left: 0rem;
+      height: 300px;
+      opacity: 0;
+  }
+  66.68% {
+      /* .imageoff */
+      opacity: 1;
+  }
+  100% {
+      /* .imageoff */
+      opacity: 1;
+  }
+}
+@keyframes parallax_terza {
+  /* controls img.terza movement */
+  0% {
+      /* .imageoff */
+      opacity: 0;
+  }
+  27.77% {
+      /* .imageon */
+      left: 0rem;
+      opacity: 0;
+  }
+  27.78% {
+      /* .imageinitial */
+      width: 0rem;
+      height: 300px;
+      left: 50rem;
+      opacity: 1;
+  }
+  33.33% {
+      /* .imageloaded */
+      width: 500px;
+      left: 0rem;
+  }
+  
+  61.10% {
+      /* .imageloaded */
+      width: 500px;
+      left: 0rem;
+  }
+  61.11% {
+      /* .imagepreunload */
+      width: 500px;
+      left: 0rem;
+      right: 50rem;
+  }
+  66.67% {
+      /* .imageunloaded */
+      width: 0rem;
+      right: 0rem;
+      left: 0rem;
+      height: 300px;
+      opacity: 1;
+  }
+  66.68% {
+      /* .imageoff */
+      opacity: 0;
+  }
+  100% {
+      /* .imageoff */
+      opacity: 0;
+  }
+}
+#proparallax img.prima {
+  animation-name: parallax_prima;
+  height: 300px;
+  width: 500px;
+  /* controls img.prima movement */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 14s;
+  animation-direction: forwards;
+  object-fit: cover;
+}
+
+#proparallax img.seconda {
+  animation-name: parallax_seconda;
+  height: 300px;
+  width: 500px;
+  /* controls img.seconda movement */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  animation-direction: forwards;
+  object-fit: cover;
+}
+
+#proparallax img.terza {
+  animation-name: parallax_terza;
+  height: 300px;
+  width: 500px;
+  /* controls img.terza movement */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  animation-direction: forwards;
+  object-fit: cover;
+}
