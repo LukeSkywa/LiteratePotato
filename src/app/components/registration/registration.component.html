@@ -2,20 +2,21 @@
     <div class="registrati">
         <button class="btn-registrati" routerLink="/login" >X</button>
     </div>
-    <form class="registrazioneForm">
+    <form [formGroup]="registrazioneForm" >
+    
         <div>
             <img src="../assets/stock.png" alt="logo" class="logo">
             <br><br><br>
             <p class="title">Registrati</p>
-            <input id="email" placeholder="email" class="inputFields">
+            <input id="username" placeholder="email" class="inputFields" formControlName="username">  
         </div>
         <div>
-            <input id="password" placeholder="password" class="inputFields" [type]="show ? 'text' : 'password'">
+            <input id="password" placeholder="password" class="inputFields" [type]="show ? 'text' : 'password'" formControlName="password">
             <img (click)="password()" src="../../../assets/icon/eye.png" alt="occhio" class="eye">
         </div>
         <br><br>
         <div>
-            <button type="submit" >registrati</button>
+            <button type="submit" (click)="registrazione()">registrati</button>
         </div>
     </form>
 </div> 
