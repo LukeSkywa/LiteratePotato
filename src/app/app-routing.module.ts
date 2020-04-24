@@ -4,8 +4,12 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistrazioneComponent } from './components/registration/registration.component';
 import { ListComponent } from './components/list/list.component';
 import { HomeComponent } from './components/home/home.component';
+import { DetailComponent } from './components/detail/detail.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { CardsComponent } from './components/cards/cards.component';
+
+
+
 //import { CardsComponent } from './components/cards/cards.component';
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 
@@ -16,7 +20,7 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'feedback', component: FeedbackComponent },
     { path: 'cards', component: CardsComponent },
-
+    { path: 'detail/:id', component: DetailComponent },
     { path: '', redirectTo: '/login', pathMatch: 'full'},
 
 ];

@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatMenuModule} from '@angular/material/menu';
+import { RouterModule, Routes } from '@angular/router';
+
+
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrazioneComponent } from './components/registration/registration.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import {MatMenuModule} from '@angular/material/menu';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ListComponent } from './components/list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailComponent } from './components/detail/detail.component';
+
 import { MatSliderModule } from '@angular/material/slider';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
@@ -34,6 +39,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     HomeComponent,
     FooterComponent,
     ListComponent,
+    DetailComponent,
     FeedbackComponent,
     CardsComponent
   ],
