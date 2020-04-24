@@ -7,14 +7,15 @@ import { ProdottoItemModule } from '../model/prodotto-item/prodotto-item.module'
   providedIn: 'root'
 })
 export class MyHttpService {
+  private _productUrl = 'http://localhost:3000/prodotti';
 
   constructor(private myHttp:HttpClient) { }
 
   getList():Observable<HttpResponse<ProdottoItemModule[]>>{
     return this.myHttp.get<ProdottoItemModule[]>('http://localhost:3000/prodotti',{observe:'response'});
       }
-    
       // putProdotto(prodotto:ProdottoItemModule){
       //   return this.myHttp.put('http://localhost:3000/prodotti'+prodotto.id,prodotto,{observe:'response'});
       // }
+
 }
