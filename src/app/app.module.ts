@@ -14,10 +14,17 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatMenuModule} from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistrazioneComponent } from './components/registration/registration.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ShowProfileComponent } from './components/show-profile/show-profile.component';
 
+import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ListComponent } from './components/list/list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   
@@ -29,10 +36,15 @@ import { ShowProfileComponent } from './components/show-profile/show-profile.com
 
   declarations: [
     AppComponent,
+    LoginComponent,
+    RegistrazioneComponent,
     MenuComponent,
     ProfileComponent,
     ShowProfileComponent,
     
+    HomeComponent,
+    FooterComponent,
+    ListComponent,
   ],
   imports: [
     CommonModule,
@@ -46,7 +58,10 @@ import { ShowProfileComponent } from './components/show-profile/show-profile.com
     MatTabsModule,
     MatGridListModule,
     MatAutocompleteModule,
-    MatMenuModule
+    MatMenuModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

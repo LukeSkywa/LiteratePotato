@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ProfileComponent } from '../components/profile/profile.component';
-import { UsersProfile } from '../models/users-profile';
+import { UsersProfile } from '../model/users-profile';
 
 @Injectable({
   providedIn: 'root'
@@ -9,21 +9,7 @@ export class ProfileService {
 
   constructor() { }
 
-  private registredUsers: UsersProfile[] = [
-    {
-      email: 'd@h', username: 'MimmaO', name: 'Domenica', surname: 'Olinto',
-      gender: 'F', phone: '33322211100', password: '123456', image: 'Rem.png'
-    },
-    {
-      email: 'f@h', username: 'FiloB', name: 'Filippo', surname: 'Bottinelli',
-      gender: 'M', phone: '33322211100', password: '123456', image: 'xray.png'
-    },
-    {
-      email: 'r@h', username: 'RoccoDB', name: 'Rocco', surname: 'Di Biase',
-      gender: 'M', phone: '33322211100', password: '1234567', image: 'vino.png'
-    }
-
-  ]
+  private registredUsers: UsersProfile[] = []
 
   checkUsersProfile(email: String, password: String) {
     let found: boolean = false;

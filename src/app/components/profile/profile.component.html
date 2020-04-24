@@ -1,9 +1,77 @@
-<div>
+<!-- <div>
     <app-show-profile *ngIf="showProfileDetail; else showForm"></app-show-profile>
     <ng-template #showForm>
         <app-edit-profile (profiloChanged)="saveProfile($event)"></app-edit-profile>
     </ng-template>
+</div> -->
+
+
+
+<div class="profile-grid">
+    <div class="title">
+        Benvenuto
+    </div>
+    <div class="user-name">
+        {{myProfile.username}}
+    </div>
+
+    <div class="img-profile-wrapper">
+        <img class="img-profile" src="/assets/profile-img/{{myProfile.image}}">
+    </div>
+
+    <div class="line"></div>
+
+    <div class="info">
+        
+        <div class="space">
+            <label for="name">Nome</label>
+        </div>
+        <div class="space">
+            <label for="surname">Cognome</label>
+        </div>
+        <div class="space">
+            <label for="gender">Genere</label>
+        </div>
+        <div class="space">
+            <label for="email">Email</label>
+        </div>
+        <div class="space">
+            <label for="phone">Phone</label>
+        </div>
+        
+        
+    </div>
+    <div class="userInfo">
+       
+        <div class="space">
+            <div id="name">{{myProfile.nome}}</div>
+        </div>
+
+        <div class="space">
+            <div id="surname">{{myProfile.cognome}}</div>
+        </div>
+
+        <div class="space">
+            <div id="gender">{{myProfile.genere}}</div>
+        </div>
+
+        <div class="space">
+            <div id="email">{{myProfile.email}}</div>
+        </div>
+
+        <div class="space">
+            <div id="phone">{{myProfile.telefono}}</div>
+        </div>
+
+       
+      
+        
+    </div>
+    <div class="btn-grid">
+        <button class="btn" >Modifica</button>
+    </div>
 </div>
 
 
 
+<!-- (click)="changePage()" -->

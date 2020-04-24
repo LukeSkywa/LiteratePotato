@@ -1,10 +1,11 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UsersProfile } from 'src/app/models/users-profile';
+import { UsersProfile } from 'src/app/model/users-profile';
 import { Router } from '@angular/router';
 import { ProfileService } from 'src/app/services/profile.service';
 import { EventEmitter } from 'protractor';
 import { ProfileComponent } from '../profile/profile.component';
+import { MyHttpService } from 'src/app/services/my-http.service';
 
 @Component({
   selector: 'app-show-profile',
@@ -18,11 +19,11 @@ export class ShowProfileComponent implements OnInit {
   userLog: UsersProfile;
   profileDisplay:true;
 
-  constructor(private router: Router, private fb: FormBuilder, private profileService: ProfileService, private profile: ProfileComponent ) {
+  constructor(private myHttpService: MyHttpService ,private router: Router, private fb: FormBuilder, private profileService: ProfileService, private profile: ProfileComponent ) {
     this.profileForm = this.fb.group({
-      name: ['', Validators.required],
-      surname: ['', Validators.required],
-      gender: ['', Validators.required],
+      nome: ['', Validators.required],
+      cognome: ['', Validators.required],
+      genere: ['', Validators.required],
       email: ['', Validators.required],
       phone: ['', Validators.required],
       password: ['', Validators.required],
@@ -31,7 +32,7 @@ export class ShowProfileComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.userLog = this.profileService.getUserProfile(sessionStorage.getItem('username'));
+    // this.userLog = this.myHttpService.getUsers();
     this.profileService.editUserProfile(this.userLog)
    
   }

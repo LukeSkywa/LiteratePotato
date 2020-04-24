@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProfileService } from 'src/app/services/profile.service';
-import { UsersProfile } from 'src/app/models/users-profile';
+import { UsersProfile } from 'src/app/model/users-profile';
 
 @Component({
   selector: 'app-profile',
@@ -19,10 +19,14 @@ showProfileDetail: boolean = true;
    }
 
 
-  ngOnInit(): void {  
+   myProfile:UsersProfile;
+  
+   ngOnInit(): void {
+     this.myProfile=JSON.parse(sessionStorage.getItem('user'));
    }
 
    saveProfile(profile:UsersProfile){
      this.showProfileDetail = !this.showProfileDetail
    }
+   
 }
