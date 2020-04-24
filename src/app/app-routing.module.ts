@@ -6,7 +6,8 @@ import { ListComponent } from './components/list/list.component';
 import { HomeComponent } from './components/home/home.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { CardsComponent } from './components/cards/cards.component';
-
+//import { CardsComponent } from './components/cards/cards.component';
+//questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },

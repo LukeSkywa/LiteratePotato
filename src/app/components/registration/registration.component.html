@@ -1,3 +1,4 @@
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,7 @@
         <p class="label-accedi">Registrati</p>
       </div>
 
-      <form>
+      <form [formGroup]="registrazioneForm">
 
         <div class="form-section1">
           <div class="form-input-section1">
@@ -35,7 +36,7 @@
                 <label for="username" class="username-label"> Nome utente </label>
               </div>
               <div class="form-input">
-                <input class="inputFields" type="text" id="username" formControlName="username">
+                <input id="username" placeholder="username" class="inputFields" formControlName="username">
               </div>
               <div class="form-span-right"> </div>
             </div>
@@ -54,11 +55,11 @@
                 <label for="password" class="password-label"> Password </label>
               </div>
               <div class="form-input">
-                <input class="inputFields" type="password" id="password" formControlName="password">
+                <input id="password" placeholder="password" class="inputFields" [type]="show ? 'text' : 'password'" formControlName="password">
               </div>
               <div class="form-span-right">
                 <span class="material-icons">
-                  visibility_off
+                  <img (click)="password()" src="../../../assets/icon/eye.png" alt="occhio" class="eye">
                 </span>
               </div>
             </div>
@@ -66,7 +67,7 @@
         </div>
 
         <div class="form-bottom-btn">
-          <button class="button-registrati" type="submit">
+          <button class="button-registrati" type="submit" (click)="registrazione()">
             <span> Registrati </span>
           </button>
         </div>

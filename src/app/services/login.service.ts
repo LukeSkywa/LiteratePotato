@@ -38,7 +38,7 @@ export class LoginService {
     this.myHttpService.getUsers().subscribe(reponse => {
       this.usersList = reponse;
     }, err => {
-      console.log('error');
+      console.log('errore');
     });
   }
 

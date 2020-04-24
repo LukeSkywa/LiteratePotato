@@ -21,4 +21,7 @@ export class MyHttpService {
         console.log(user);
         return this.myHttp.post('http://localhost:3000/users', user);
       }
+      modifyUser(user: UsersProfile){
+        return this.myHttp.put('http://localhost:3000/users/'+sessionStorage.getItem('id'), user);
+      }
 }

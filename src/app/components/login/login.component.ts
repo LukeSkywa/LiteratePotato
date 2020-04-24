@@ -12,11 +12,11 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class LoginComponent implements OnInit {
   usersList: UsersProfile[];
   loginForm: FormGroup;
-
-  constructor(private fb: FormBuilder, private loginService: LoginService) {
-    this.loginForm = this.fb.group({
-      username : '',
-      password : ''
+  show:boolean;
+  constructor(private fb : FormBuilder, private loginService : LoginService) {
+    this.loginForm=this.fb.group({
+      username : "", 
+      password : ""
     })
   }
 
@@ -27,5 +27,9 @@ export class LoginComponent implements OnInit {
   }
  // login() {
   // this.loginService.eseguiLogin(this.loginForm.value);
-  // }
+  //}
+  password() {
+    this.show = !this.show;
+    console.log(this.show);
+  }
 }

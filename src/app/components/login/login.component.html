@@ -4,8 +4,8 @@
   <title> Login</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
-
+<body>
+    
   <div class="wrapper">
 
     <div class="grid-top"></div>
@@ -55,11 +55,11 @@
                 <label for="password" class="password-label"> Password </label>
               </div>
               <div class="form-input">
-                <input class="inputFields" type="password" id="password" formControlName="password">
+                <input matInput  type="password" id="password"  formControlName="password"[type]="show ? 'text' : 'password'" >
               </div>
               <div class="form-span-right">
                 <span class="material-icons">
-                  visibility_off
+                  <img (click)="password()" src="../../../assets/icon/eye.png" alt="occhio" class="eye">
                 </span>
               </div>
             </div>

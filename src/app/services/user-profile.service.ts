@@ -8,39 +8,13 @@ import { MyHttpService } from './my-http.service';
 })
 export class UserProfileService {
   usersList: UsersProfile[];
-/*
-  eseguiLogin(username: string, password: string) {
-    if (username != null && username !== '' 
-      && password != null && password !== '') {
-      sessionStorage.setItem("user", username);
-      sessionStorage.setItem("password", password);
-      this.router.navigateByUrl('/portale/home');
-      alert('benvenuto');
-    }else{
-      alert('login fallita');
-    }
-  }
 
-  eseguiLogout(){
-    sessionStorage.removeItem("user");
-    sessionStorage.removeItem("admin");
-    this.router.navigateByUrl('/login');
-    alert("logout effettuato, arrivederci");
-  }
-
-
-} 
-usersList: User[];
-  
   constructor(private router:Router,private myHttpService: MyHttpService) { 
-    this.getUsers();
+    this.myHttpService.getUsers();
   }
 
   getList(){
     return this.usersList;
-  }
-  constructor(private router:Router,private myHttpService: MyHttpService) { 
-    this.getUsers();
   }
   checkUt(password:string, email:string):boolean{
     const user = this.usersList.find(item =>{
@@ -77,21 +51,16 @@ usersList: User[];
       return false;
     }  
   }
-
-  registrazione(ut: UsersProfile):void{
-      this.usersList.push(ut); 
-  }
-
   control(email:string, password:string):string{
     let user=this.getUt(email, password);
     if(user){
-      return user.admin ? "admin" : "normal" 
+     return user.admin ? "admin" : "normal" 
     }
     else{
       return "nope";
-    }
-  }
+   }
+ }
 
 
-}
-*/
+
+} 

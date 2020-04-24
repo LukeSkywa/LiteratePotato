@@ -58,6 +58,12 @@
     box-shadow: -8px -8px #bfbdbd;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 .loginForm * {
     padding: 10px;
@@ -162,8 +168,8 @@ input:checked + .slider:before {
     color: white;
     outline: none;
     position: absolute;
-    margin-left: 293px;
-    margin-top: 30px;
+    margin-left: 130px;
+    margin-top: 40px;
     cursor: pointer;
 }
 .btn-registrati:hover {
@@ -216,11 +222,11 @@ button:hover span {
     animation-delay: 0.06s;
 }
 
-button:active {
-    width: 214px;
-    height: 52px;
-    margin-top: 8px;
-}
+//button:active {
+    //width: 214px;
+   // height: 52px;
+   // margin-top: 8px;
+//}
 
 @keyframes rotate {
     0% {
