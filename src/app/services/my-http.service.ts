@@ -20,7 +20,9 @@ export class MyHttpService {
       // putProdotto(prodotto:ProdottoItemModule){
       //   return this.myHttp.put('http://localhost:3000/prodotti'+prodotto.id,prodotto,{observe:'response'});
       // }
-
+  getOneProdotto(id:number):Observable<any>{
+        return this.myHttp.get('http://localhost:3000/prodotti/'+id);
+      }
     
      postUser(user:UsersProfile){
         console.log(user);

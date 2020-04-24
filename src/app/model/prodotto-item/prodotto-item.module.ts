@@ -7,4 +7,5 @@ export interface ProdottoItemModule {
   prezzo:number;
   preferito:boolean;
   nascosto:boolean;
+  descrizione:string;
 }
