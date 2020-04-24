@@ -1,10 +1,9 @@
 @import '~@angular/material/theming';
 @import '../../../assets/scss/mixin';
 @import '../../../assets/scss/variables';
-
-.profile-grid{
+.profile-grid {
     display: grid;
-    grid-template-columns:  1fr 250px 250px 1fr ;
+    grid-template-columns: 1fr 250px 250px 1fr;
     grid-template-rows: max-content;
     margin: auto;
     gap: 15px;
@@ -13,36 +12,40 @@
     padding: 15px;
     color: white;
     font-size: 25px;
-
 }
-.title{
+
+.title {
     grid-row: 1;
     grid-column: 2/4;
     justify-self: center;
     font-size: 30px;
     margin-top: 35px;
 }
-.user-name{
+
+.user-name {
     grid-row: 2;
     grid-column: 2/4;
     justify-self: center;
     font-size: 30px;
-    
 }
-label{
+
+label {
     justify-self: right;
 }
-.img-profile-wrapper{
+
+.img-profile-wrapper {
     grid-row: 3;
     grid-column: 2/4;
     justify-self: center;
     margin: 25px;
 }
-.img-profile{
+
+.img-profile {
     width: 170px;
     margin-top: -70px;
 }
-.line{
+
+.line {
     border-left: 1px solid white;
     height: 400px;
     position: absolute;
@@ -50,28 +53,32 @@ label{
     margin-left: -1px;
     top: 460px;
 }
-.btn{
+
+.btn {
     @include button-style;
     width: 200px;
     height: 60px;
+    color: black;
 }
 
-.btn-grid{
+.btn-grid {
     grid-column: 2/4;
     justify-self: center;
 }
 
-.info{
+.info {
     grid-row: 3;
     grid-column: 2;
     margin-top: 120px;
     justify-self: right;
 }
-.userInfo{
+
+.userInfo {
     grid-row: 3;
     grid-column: 3;
     margin-top: 120px;
 }
-.space{
+
+.space {
     margin: 45px;
 }

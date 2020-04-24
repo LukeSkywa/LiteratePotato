@@ -9,5 +9,6 @@ export interface UsersProfile {
     username: string;
     genere: string;
     telefono:string; 
+    image:string;
     }
     
