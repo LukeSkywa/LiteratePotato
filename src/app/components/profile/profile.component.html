@@ -1,12 +1,7 @@
-<!-- <div>
-    <app-show-profile *ngIf="showProfileDetail; else showForm"></app-show-profile>
-    <ng-template #showForm>
-        <app-edit-profile (profiloChanged)="saveProfile($event)"></app-edit-profile>
-    </ng-template>
-</div> -->
 
 
 
+<app-menu></app-menu>
 <div class="profile-grid">
     <div class="title">
         Benvenuto
@@ -15,9 +10,9 @@
         {{myProfile.username}}
     </div>
 
-    <div class="img-profile-wrapper">
+    <!-- <div class="img-profile-wrapper">
         <img class="img-profile" src="/assets/profile-img/{{myProfile.image}}">
-    </div>
+    </div> -->
 
     <div class="line"></div>
 
@@ -75,3 +70,7 @@
 
 
 <!-- (click)="changePage()" -->
+    
+
+<app-footer></app-footer>
+

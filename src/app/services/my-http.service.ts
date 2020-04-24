@@ -7,6 +7,7 @@ import { UsersProfile } from 'src/app/model/users-profile';
   providedIn: 'root'
 })
 export class MyHttpService {
+  private _productUrl = 'http://localhost:3000/prodotti';
 
   constructor(private myHttp:HttpClient) { }
 
@@ -16,9 +17,18 @@ export class MyHttpService {
   getList():Observable<HttpResponse<ProdottoItemModule[]>>{
     return this.myHttp.get<ProdottoItemModule[]>('http://localhost:3000/prodotti',{observe:'response'});
       }
+      // putProdotto(prodotto:ProdottoItemModule){
+      //   return this.myHttp.put('http://localhost:3000/prodotti'+prodotto.id,prodotto,{observe:'response'});
+      // }
+  getOneProdotto(id:number):Observable<any>{
+        return this.myHttp.get('http://localhost:3000/prodotti/'+id);
+      }
     
      postUser(user:UsersProfile){
         console.log(user);
         return this.myHttp.post('http://localhost:3000/users', user);
+      }
+      modifyUser(user: UsersProfile){
+        return this.myHttp.put('http://localhost:3000/users/'+sessionStorage.getItem('id'), user);
       }
 }

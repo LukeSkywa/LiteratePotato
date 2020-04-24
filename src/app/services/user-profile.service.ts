@@ -8,7 +8,6 @@ import { MyHttpService } from './my-http.service';
 })
 export class UserProfileService {
   usersList: UsersProfile[];
- 
   constructor(private router:Router,private myHttpService: MyHttpService) { 
     this.myHttpService.getUsers();
   }
@@ -54,13 +53,13 @@ export class UserProfileService {
   control(email:string, password:string):string{
     let user=this.getUt(email, password);
     if(user){
-      return user.admin ? "admin" : "normal" 
+     return user.admin ? "admin" : "normal" 
     }
     else{
       return "nope";
-    }
-  }
+   }
+ }
 
 
- 
-}
+
+} 

@@ -1,0 +1,24 @@
+<app-menu></app-menu>
+<div class="grid-container">
+    <div class="titolo">
+        <h1>{{prodotto.Nome}}</h1>
+    </div>
+    <div class="descrizione">
+        <p>
+            {{prodotto.descrizione}}
+        </p>
+    </div>
+    <div class="img1">
+        <img src="/assets/prodotti-img/{{prodotto.img}}">
+    </div>
+    <div class="img2">
+        <img src="/assets/prodotti-img/{{prodotto.img}}">
+    </div>
+    <div class="marca">
+        <h4 class="init">Prezzo:</h4>
+        <h2>{{prodotto.prezzo}}</h2>
+        <h4 class="sec">Marca:</h4>
+        <h2>{{prodotto.produttore}}</h2>
+    </div>
+</div>
+<app-footer></app-footer>

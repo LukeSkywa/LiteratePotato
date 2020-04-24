@@ -7,7 +7,8 @@
             "taglia": 32,
             "prezzo": 40,
             "preferito": true,
-            "nascosto": false
+            "nascosto": false,
+            "descrizione": "Presentata nel 1972, la nostra polo è oggi disponibile in una ricca gamma di colori e modelli, pur conservando lo stesso stile iconico dell'originale. Questa versione Skinny-Fit in piqué di cotone è particolarmente versatile, perfetta da abbinare a un paio di jeans, ma anche a una lunga gonna da sera."
         },
         {
             "id": 2,
@@ -17,8 +18,8 @@
             "taglia": 35,
             "prezzo": 40,
             "preferito": true,
-            "nascosto": false
-
+            "nascosto": false,
+            "descrizione": "FILA Collezione URBAN LINE t-shirt modello Turtle a lupetto basso e stampa logo frontale. Modello corto."
         },
         {
             "id": 3,
@@ -28,7 +29,8 @@
             "taglia": 18,
             "prezzo": 150,
             "preferito": false,
-            "nascosto": false
+            "nascosto": false,
+            "descrizione": "Con cassa e bracciale in acciaio contrastati da un quadrante nero spazzolato soleil, questo orologio fa parte delle nuove introduzioni della linea G-Timeless per la collezione Pre-Fall 2019. Al centro del quadrante campeggia una tigre, circondata da altri codici della Maison, come l'ape, la stella e il dettaglio GG, raffigurati sotto forma di lancette."
         },
         {
             "id": 4,
@@ -38,7 +40,8 @@
             "taglia": 36,
             "prezzo": 70,
             "preferito": true,
-            "nascosto": false
+            "nascosto": false,
+            "descrizione": "Le texture a contrasto e l'iconico branding rifiniscono il sofisticato bomber, perfetto per i tuoi outfit smart casual"
         },
         {
             "id": 5,
@@ -48,8 +51,8 @@
             "taglia": 1,
             "prezzo": 40,
             "preferito": true,
-            "nascosto": true
-
+            "nascosto": true,
+            "descrizione": "Ray-Ban Aviator protegge i tuoi occhi dai raggi solari e ti offre un'ottima visione. Un classico iconico e di stile"
         },
         {
             "id": 6,
@@ -59,7 +62,8 @@
             "taglia": 40,
             "prezzo": 80,
             "preferito": true,
-            "nascosto": false
+            "nascosto": false,
+            "descrizione": "Il Levi's jeans 501è il jeans iconico, il simbolo della cultura americana che ha dato inizio alla storia di Levi's: il jeans 501® Original Fit. Il taglio è diritto lungo i fianchi, la gamba leggermente affusolata e la chiusura a bottoni."
         },
         {
             "id": 7,
@@ -69,7 +73,8 @@
             "taglia": 32,
             "prezzo": 50,
             "preferito": false,
-            "nascosto": false
+            "nascosto": false,
+            "descrizione": "Questa felpa celebra la storia di adidas con un design in cui il vero protagonista è il Trifoglio. La struttura confortevole è realizzata in morbidissima spugna di cotone."
         },
         {
             "id": 8,
@@ -79,7 +84,8 @@
             "taglia": 41,
             "prezzo": 60,
             "preferito": true,
-            "nascosto": false
+            "nascosto": false,
+            "descrizione": "Con intersuola in schiuma a tutta lunghezza e unità VaporMax Air, la scarpa Nike Air VaporMax 360 unisce comfort eccezionale sotto il piede e un inconfondibile stile anni 2000 ispirato al modello Air Max 360."
         }
     ],
     "users": [{
