@@ -13,8 +13,7 @@ export class ListComponent implements OnInit {
   prodottoListAll: ProdottoItemModule[];
   startPage: number;
   limitPage: number;
-  showDetail: EventEmitter<number>= new EventEmitter();
-
+  
   constructor(private myHttp: MyHttpService) {
     this.startPage = 0;
     this.limitPage = 5;
@@ -29,9 +28,6 @@ recoverList() {
 
   ngOnInit(): void {
     this.recoverList();
-  }
-  dettaglio(id: number){
-    this.showDetail.emit(id);
   }
   showMoreItems()
   {
