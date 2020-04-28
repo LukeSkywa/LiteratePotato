@@ -37,12 +37,18 @@ recoverList() {
     this.limitPage = Number(this.limitPage) - 5;
   }
   showAll() {
-    this.prodottoList = [...this.prodottoListAll];
+    this.prodottoList = this.prodottoListAll.filter(prodotto =>{
+      return !prodotto.nascosto;
+    });
   }
   showFavorite() {
-    this.prodottoList = this.prodottoListAll.filter(prodotto => prodotto.preferito);
+    this.prodottoList = this.prodottoListAll.filter(prodotto =>{
+      return prodotto.preferito;
+    });
   }
   showHidden() {
-    this.prodottoList = this.prodottoListAll.filter(prodotto => prodotto.nascosto);
+    this.prodottoList = this.prodottoListAll.filter(prodotto => {
+      return prodotto.nascosto;
+    });
   }
 }
