@@ -15,7 +15,7 @@ export class GuardService implements CanActivate{
       return true;
     } else {
       window.alert("effettua il login per accedere a questa pagina");
-      this.router.navigateByUrl('/list');
+      this.router.navigateByUrl('/login');
       return false;
     }
   }

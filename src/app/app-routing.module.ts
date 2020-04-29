@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { GuardService } from './services/guard.service';
 
 
 
@@ -17,12 +18,12 @@ import { CardsComponent } from './components/cards/cards.component';
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
       { path: 'registrati', component:RegistrazioneComponent},
-      { path: 'list', component: ListComponent },
-      { path: 'home', component: HomeComponent },
-      {path: 'profile' , component:ProfileComponent},
-      { path: 'feedback', component: FeedbackComponent },
-      { path: 'cards', component: CardsComponent },
-      { path: 'detail/:id', component: DetailComponent },
+      { path: 'list', component: ListComponent, canActivate:[GuardService] },
+      { path: 'home', component: HomeComponent , canActivate:[GuardService]},
+      {path: 'profile' , component:ProfileComponent, canActivate:[GuardService]},
+      { path: 'feedback', component: FeedbackComponent, canActivate:[GuardService] },
+      { path: 'cards', component: CardsComponent , canActivate:[GuardService]},
+      { path: 'detail/:id', component: DetailComponent, canActivate:[GuardService] },
       { path: '', redirectTo: '/login', pathMatch: 'full'},
 ];
 
