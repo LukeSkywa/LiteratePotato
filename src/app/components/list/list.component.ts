@@ -12,9 +12,11 @@ export class ListComponent implements OnInit {
   prodottoList: ProdottoItemModule[];
   prodottoListAll: ProdottoItemModule[];
   limitPage: number;
+  startPage: number;
   
   constructor(private myHttp: MyHttpService) {
     this.limitPage = 5;
+    this.startPage = 0;
   }
 
 recoverList() {
