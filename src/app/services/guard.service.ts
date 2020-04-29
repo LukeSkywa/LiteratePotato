@@ -10,7 +10,7 @@ export class GuardService implements CanActivate{
 
   constructor(private router: Router) { }
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+  canActivate() {
     if (sessionStorage.getItem('user') != null) {
       return true;
     } else {

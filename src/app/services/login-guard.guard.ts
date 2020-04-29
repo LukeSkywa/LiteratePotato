@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginGuardGuard implements CanActivate {
   constructor(private router:Router ){}
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+  canActivate() {
     if (sessionStorage.getItem('user') != null) {
       this.router.navigateByUrl('/home');
       return false
