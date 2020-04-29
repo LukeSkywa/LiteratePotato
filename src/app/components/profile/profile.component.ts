@@ -14,12 +14,13 @@ export class ProfileComponent implements OnInit {
 showProfileDetail: boolean = true;
 
   
-
+// private profile: ProfileComponent
   constructor() {
    }
 
-
+  //  userLog: UsersProfile;
    myProfile:UsersProfile;
+  
   
    ngOnInit(): void {
      this.myProfile=JSON.parse(sessionStorage.getItem('user'));
@@ -28,5 +29,7 @@ showProfileDetail: boolean = true;
    saveProfile(profile:UsersProfile){
      this.showProfileDetail = !this.showProfileDetail
    }
-   
+  //  changePage(){
+  //   this.profile.saveProfile(this.userLog);
+  // }
 }

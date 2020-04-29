@@ -38,6 +38,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CardsComponent } from './components/cards/cards.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 @NgModule({
   
    
@@ -57,7 +58,8 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     ListComponent,
     DetailComponent,
     FeedbackComponent,
-    CardsComponent
+    CardsComponent,
+    EditProfileComponent
   ],
   imports: [
     CommonModule,

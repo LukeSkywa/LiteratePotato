@@ -1,13 +1,10 @@
-
-
-
 <app-menu></app-menu>
 <div class="profile-grid">
     <div class="title">
         Benvenuto
     </div>
     <div class="user-name">
-        {{myProfile.username}}
+        <!-- {{myProfile.username}} -->
     </div>
 
     <!-- <div class="img-profile-wrapper">
@@ -17,7 +14,7 @@
     <div class="line"></div>
 
     <div class="info">
-        
+       
         <div class="space">
             <label for="name">Nome</label>
         </div>
@@ -37,40 +34,34 @@
         
     </div>
     <div class="userInfo">
+        <form>
+            
        
-        <div class="space">
-            <div id="name">{{myProfile.nome}}</div>
+        <!-- <div class="space">
+            <div id="name"><input placeholder="{{myprofile.nome}}"></div>
         </div>
 
         <div class="space">
-            <div id="surname">{{myProfile.cognome}}</div>
+            <div id="surname"><input placeholder="{{myprofile.cognome}}"></div>
         </div>
 
         <div class="space">
-            <div id="gender">{{myProfile.genere}}</div>
+            <div id="gender"><input placeholder="{{myprofile.genere}}"></div>
         </div>
 
         <div class="space">
-            <div id="email">{{myProfile.email}}</div>
+            <div id="email"><input placeholder="{{myprofile.email}}"></div>
         </div>
 
         <div class="space">
-            <div id="phone">{{myProfile.telefono}}</div>
-        </div>
+            <div id="phone"><input placeholder="{{myprofile.telefono}}"></div>
+        </div> -->
 
-       
+    </form>
       
         
     </div>
-    <div class="btn-grid">
-        <button class="btn" [routerLink]="['/edit-profile', myProfile.id]">Modifica </button>
-    </div>
+    <!-- <div class="btn-grid">
+        <button class="btn" [routerLink]="['/profile']">Conferma </button>
+    </div> -->
 </div>
-
-
-
-<!-- (click)="changePage()" -->
-    
-
-<app-footer></app-footer>
-

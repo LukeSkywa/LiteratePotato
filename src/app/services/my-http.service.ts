@@ -28,7 +28,11 @@ export class MyHttpService {
         console.log(user);
         return this.myHttp.post('http://localhost:3000/users', user);
       }
-      modifyUser(user: UsersProfile){
-        return this.myHttp.put('http://localhost:3000/users/'+sessionStorage.getItem('id'), user);
+
+      modifyUser(username:string){
+        return this.myHttp.put('http://localhost:3000/users/'+sessionStorage.getItem('username'), username);
+      }
+      getOneUsers(id:number):Observable<any>{
+        return this.myHttp.get('http://localhost:3000/users/'+id);
       }
 }

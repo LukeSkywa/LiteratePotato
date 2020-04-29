@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'list', component: ListComponent },
       { path: 'home', component: HomeComponent },
       {path: 'profile' , component:ProfileComponent},
+      {path: 'edit-profile/:id' , component:EditProfileComponent},
       { path: 'feedback', component: FeedbackComponent },
       { path: 'cards', component: CardsComponent },
       { path: 'detail/:id', component: DetailComponent },
