@@ -17,9 +17,6 @@ export class MyHttpService {
   getList():Observable<HttpResponse<ProdottoItemModule[]>>{
     return this.myHttp.get<ProdottoItemModule[]>('http://localhost:3000/prodotti',{observe:'response'});
       }
-      // putProdotto(prodotto:ProdottoItemModule){
-      //   return this.myHttp.put('http://localhost:3000/prodotti'+prodotto.id,prodotto,{observe:'response'});
-      // }
   getOneProdotto(id:number):Observable<any>{
         return this.myHttp.get('http://localhost:3000/prodotti/'+id);
       }
