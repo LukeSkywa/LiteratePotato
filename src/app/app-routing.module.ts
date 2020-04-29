@@ -9,6 +9,7 @@ import { DetailComponent } from './components/detail/detail.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { GuardService } from './services/guard.service';
+import { LoginGuardGuard } from './services/login-guard.guard';
 
 
 
@@ -16,8 +17,8 @@ import { GuardService } from './services/guard.service';
 //questi sono i routes base man mano che create le cose e vi servono scommentate queste qua sotto e modificatele a piacimento
 
 const routes: Routes = [
-    { path: 'login', component: LoginComponent },
-      { path: 'registrati', component:RegistrazioneComponent},
+    { path: 'login', component: LoginComponent, canActivate:[LoginGuardGuard]  },
+      { path: 'registrati', component:RegistrazioneComponent, canActivate:[LoginGuardGuard]  },
       { path: 'list', component: ListComponent, canActivate:[GuardService] },
       { path: 'home', component: HomeComponent , canActivate:[GuardService]},
       {path: 'profile' , component:ProfileComponent, canActivate:[GuardService]},
