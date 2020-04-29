@@ -11,11 +11,9 @@ export class ListComponent implements OnInit {
 
   prodottoList: ProdottoItemModule[];
   prodottoListAll: ProdottoItemModule[];
-  startPage: number;
   limitPage: number;
   
   constructor(private myHttp: MyHttpService) {
-    this.startPage = 0;
     this.limitPage = 5;
   }
 

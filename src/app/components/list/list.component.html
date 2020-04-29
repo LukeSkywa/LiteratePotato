@@ -5,7 +5,7 @@
         <button class="btn" (click)="showFavorite()">Preferiti</button>
         <button class="btn" (click)="showHidden()">Nascosti</button>
     </div>
-    <div class="prodotto-box" *ngFor="let prodotto of prodottoList | slice : startPage:limitPage">
+    <div class="prodotto-box" *ngFor="let prodotto of prodottoList ">
         <img class="prodotto-image" src="/assets/prodotti-img/{{prodotto.img}}">
         <div>
             <h1 class="standard-text">{{prodotto.Nome}}</h1>

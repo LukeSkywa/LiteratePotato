@@ -89,48 +89,48 @@
         }
     ],
     "users": [{
-        "id": 1,
-        "nome": "matteo",
-        "cognome": "brecianini",
-        "username": "brescio",
-        "email": "mattteo.bs2000@gmail.com",
-        "password": "123",
-        "genere": "maschio",
-        "telefono": "15478963256",
-        "image":"brescio.jpg"
-    },
-    {
-        "id": 2,
-        "nome": "singh",
-        "cognome": "amanpreet",
-        "username": "signh",
-        "email": "singh@gmail.com",
-        "password": "123",
-        "genere": "maschio",
-        "telefono": "243243373",
-        "image":"signh.jpeg"
-    },
-    {
-        "id": 3,
-        "nome": "lorenzo",
-        "cognome": "conti",
-        "username": "contilorenzo",
-        "email": "loreconti@gmail.com",
-        "password": "123",
-        "genere": "maschio",
-        "telefono": "1234567890",
-        "image":"contilorenzo.jpeg"
-    },
-    {
-        "id": 4,
-        "nome": "daneil",
-        "cognome": "soccini",
-        "username": "danisoci",
-        "email": "danelsoccini@gmail.com",
-        "password": "123",
-        "genere": "maschio",
-        "telefono": "827337373",
-        "image":"danisoci.jpeg"
-    }
-]
+            "id": 1,
+            "nome": "matteo",
+            "cognome": "brecianini",
+            "username": "brescio",
+            "email": "mattteo.bs2000@gmail.com",
+            "password": "123",
+            "genere": "maschio",
+            "telefono": "15478963256",
+            "image": "brescio.jpg"
+        },
+        {
+            "id": 2,
+            "nome": "singh",
+            "cognome": "amanpreet",
+            "username": "signh",
+            "email": "singh@gmail.com",
+            "password": "123",
+            "genere": "maschio",
+            "telefono": "243243373",
+            "image": "signh.jpeg"
+        },
+        {
+            "id": 3,
+            "nome": "lorenzo",
+            "cognome": "conti",
+            "username": "contilorenzo",
+            "email": "loreconti@gmail.com",
+            "password": "123",
+            "genere": "maschio",
+            "telefono": "1234567890",
+            "image": "contilorenzo.jpeg"
+        },
+        {
+            "id": 4,
+            "nome": "daneil",
+            "cognome": "soccini",
+            "username": "danisoci",
+            "email": "danelsoccini@gmail.com",
+            "password": "123",
+            "genere": "maschio",
+            "telefono": "827337373",
+            "image": "danisoci.jpeg"
+        }
+    ]
 }
