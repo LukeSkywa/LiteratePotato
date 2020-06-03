@@ -20,7 +20,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent, canActivate:[LoginGuardGuard]  },
       { path: 'registrati', component:RegistrazioneComponent, canActivate:[LoginGuardGuard]  },
       { path: 'list', component: ListComponent, canActivate:[GuardService] },
-      { path: 'home', component: HomeComponent , canActivate:[GuardService]},
+      { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)},
       {path: 'profile' , component:ProfileComponent, canActivate:[GuardService]},
       { path: 'feedback', component: FeedbackComponent, canActivate:[GuardService] },
       { path: 'cards', component: CardsComponent , canActivate:[GuardService]},

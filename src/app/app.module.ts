@@ -26,18 +26,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './components/detail/detail.component';
 
-import { MatSliderModule } from '@angular/material/slider';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatButtonModule} from '@angular/material/button';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatSelectModule} from '@angular/material/select';
-import {MatToolbarModule} from '@angular/material/toolbar';
+
 import { CardsComponent } from './components/cards/cards.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { LogSigninComponent } from './features/log-signin/log-signin.component';
+import { SharedModule } from './Shared/shared.module';
 @NgModule({
   
    
@@ -50,36 +43,21 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     AppComponent,
     LoginComponent,
     RegistrazioneComponent,
-    MenuComponent,
     ProfileComponent,
+    MenuComponent,
     HomeComponent,
-    FooterComponent,
     ListComponent,
     DetailComponent,
     FeedbackComponent,
-    CardsComponent
+    CardsComponent,
+    LogSigninComponent
   ],
   imports: [
-    CommonModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSlideToggleModule,
-    MatInputModule,
-    MatTabsModule,
-    MatGridListModule,
-    MatAutocompleteModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatMenuModule,
-    MatSliderModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatDividerModule,
-    MatIconModule,
-    MatRadioModule,
-    MatSelectModule,
+    SharedModule
 
   ],
   providers: [],
